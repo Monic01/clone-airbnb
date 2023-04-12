@@ -1,0 +1,189 @@
+@import url('reset.css');
+
+:root {
+    --brand-color: #ff385c;
+    --bg-color: rgba(255, 255, 255);
+    --gray-color: rgba(0, 0, 0, .2);
+    --main-font-size: 14px;
+}
+
+@media screen and (max-width:1920px) {
+    body {
+        height: 1200vh;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        background-color: gray;
+    }
+
+    .header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: var(--bg-color);
+        z-index: 10;
+    }
+
+    .header-top {
+        padding: 15px 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--gray-color);
+        position: relative;
+    }
+
+    .header-top h1 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .header-top h1>a {
+        color: var(--brand-color);
+    }
+
+    .header-top .logo {
+        margin-right: 10px;
+        font-size: 40px;
+        vertical-align: -14px;
+    }
+
+    .header__search-bar {
+        height: 50px;
+
+        padding: 8px 10px 8px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 18px;
+        border: 1px solid var(--gray-color);
+        border-radius: 30px;
+        box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.1);
+
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all .5s;
+    }
+
+    .header__search-bar:hover {
+        box-shadow: 1px 5px 5px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .header__search-bar>a {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 150%;
+    }
+
+    .header__search-bar>a span {
+        font-size: var(--main-font-size);
+    }
+
+    .search-bar__center::before {
+        content: "";
+        width: 1px;
+        height: 20px;
+
+        margin: 0 18px;
+        display: inline-block;
+        background-color: var(--gray-color);
+        vertical-align: -4px;
+    }
+
+    .search-bar__center::after {
+        content: "";
+        width: 1px;
+        height: 20px;
+        margin: 0 18px;
+
+        display: inline-block;
+        background-color: var(--gray-color);
+        vertical-align: -4px;
+    }
+
+    .search-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        margin-left: 18px;
+        background-color: var(--brand-color);
+        color: white;
+        border-radius: 50%;
+    }
+
+    .header__user-profile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .user-airbnb {
+        font-size: var(--main-font-size);
+        font-weight: bold;
+    }
+
+    .user-login {
+        padding: 10px 8px 10px 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+        border: 1px solid var(--gray-color);
+        border-radius: 25px;
+    }
+
+    .user {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid var(--gray-color);
+        border-radius: 50%;
+        background-color: var(--gray-color);
+    }
+
+
+    .header-nav {
+        max-height: 80px;
+        padding: 0 80px;
+        margin-top: 40px;
+        display: flex;
+        background-color: var(--bg-color);
+    }
+
+    .header-nav ion-icon {
+        font-size: 32px;
+    }
+
+    .header-nav nav>ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .header-nav nav>ul li a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        color: rgba(0, 0, 0, .6);
+        transition: all .5s;
+    }
+
+    .header-nav nav>ul li a:hover {
+        color: rgba(0, 0, 0);
+    }
+
+    .nav-icon {
+        width: 25px;
+        height: 25px;
+        margin-bottom: 10px;
+    }
+}
