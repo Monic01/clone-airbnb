@@ -123,8 +123,33 @@
     }
 
     .user-airbnb {
+        height: 40px;
+        padding: 5px 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
         font-size: var(--main-font-size);
         font-weight: bold;
+        transition: all .5s;
+    }
+
+    .user-airbnb:hover {
+        background-color: var(--gray-color);
+    }
+
+    .user-language {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        transition: all .5s;
+    }
+
+    .user-language:hover {
+        background-color: var(--gray-color);
     }
 
     .user-login {
@@ -135,6 +160,13 @@
         gap: 5px;
         border: 1px solid var(--gray-color);
         border-radius: 25px;
+        cursor: pointer;
+
+        transition: all .5s;
+    }
+
+    .user-login:hover {
+        box-shadow: 0 0 10px 0 var(--gray-color);
     }
 
     .user {
@@ -207,6 +239,7 @@
     }
 
     .nav-arrow:hover {
+        transform: scale(1.02);
         box-shadow: 1px 1px 10px 0 var(--gray-color);
     }
 
@@ -254,6 +287,40 @@
         font-weight: bold;
     }
 
+    /* 메인화면 */
+    .check-map {
+        width: 150px;
+        height: 50px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: fixed;
+        bottom: 140px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        border-radius: 25px;
+        border: none;
+        color: var(--bg-color);
+        background-color: black;
+        font-size: var(--main-font-size);
+        font-weight: bold;
+        cursor: pointer;
+        transition: all .5s;
+    }
+
+    .check-map:hover {
+        transform: translateX(-50%) scale(1.05);
+    }
+
+    .check-map>ion-icon {
+        margin-left: 8px;
+        font-size: 18px;
+    }
+
+    /* footer */
     footer {
         height: 110px;
         padding: 0 80px;
