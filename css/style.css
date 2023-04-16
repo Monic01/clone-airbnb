@@ -293,23 +293,26 @@
 
     .contents {
         padding: 0 80px;
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+        flex-wrap: wrap;
     }
 
     .content {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        flex: 1;
+        min-width: 270px;
+        max-width: 320px;
     }
 
     .stay-picture {
-        max-width: 320px;
-        height: 300px;
+        /* max-width: 320px; */
+        /* height: 300px; */
         overflow: hidden;
     }
 
     .picture-list {
-        width: calc(320px * 5);
-        height: 300px;
+        width: 500%;
         display: flex;
     }
 
