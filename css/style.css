@@ -233,6 +233,7 @@
         border-radius: 50%;
         cursor: pointer;
         background-color: white;
+        box-shadow: 10px 0 10px 10px white;
 
         transition: all .5s;
     }
@@ -306,8 +307,6 @@
     }
 
     .stay-picture {
-        /* max-width: 320px; */
-        /* height: 300px; */
         overflow: hidden;
     }
 
@@ -317,6 +316,7 @@
     }
 
     .picture {
+        padding-top: 10px;
         border-radius: 10px;
     }
 
@@ -326,6 +326,11 @@
         object-fit: cover;
         object-position: center;
         border-radius: 10px;
+    }
+
+    .stay-info {
+        display: flex;
+        flex-direction: column;
     }
 
     .check-map {
