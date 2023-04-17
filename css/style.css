@@ -293,31 +293,30 @@
     }
 
     .contents {
+        width: 100%;
         padding: 0 80px;
-        display: flex;
-        justify-content: flex-start;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 20px;
-        flex-wrap: wrap;
     }
 
-    .content {
-        flex: 1;
-        min-width: 270px;
-        max-width: 320px;
-    }
+    .content {}
 
     .stay-picture {
         overflow: hidden;
+        position: relative;
     }
 
     .picture-list {
         width: 500%;
+        height: auto;
         display: flex;
     }
 
     .picture {
-        padding-top: 10px;
-        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        padding: 20px 0;
     }
 
     .picture img {
@@ -325,7 +324,27 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
-        border-radius: 10px;
+        border-radius: 15px;
+    }
+
+    .picture-nav {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+
+        transform: translateX(-50%);
+    }
+
+    .likes {
+        position: absolute;
+        top: 30px;
+        right: 10px;
+    }
+
+    .likes-icon {
+        color: white;
+        font-size: 30px;
+        border-radius: 50%;
     }
 
     .stay-info {
