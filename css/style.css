@@ -7,6 +7,12 @@
     --main-font-size: 14px;
 }
 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 @media screen and (max-width:1920px) {
     body {
         max-width: 1920px;
@@ -233,7 +239,7 @@
         border-radius: 50%;
         cursor: pointer;
         background-color: white;
-        box-shadow: 10px 0 10px 10px white;
+        box-shadow: 10px 0 10px 0 white;
 
         transition: all .5s;
     }
@@ -296,11 +302,13 @@
         width: 100%;
         padding: 0 80px;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
         gap: 20px;
     }
 
-    .content {}
+    .content:not(:hover) .picture-nav {
+        display: none;
+    }
 
     .stay-picture {
         overflow: hidden;
@@ -309,7 +317,8 @@
 
     .picture-list {
         width: 500%;
-        height: auto;
+        height: 320px;
+        /* 높이조절?? */
         display: flex;
     }
 
@@ -327,12 +336,35 @@
         border-radius: 15px;
     }
 
-    .picture-nav {
+    .picture-radio {
         position: absolute;
         bottom: 25px;
         left: 50%;
 
         transform: translateX(-50%);
+    }
+
+    .picture-nav {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: var(--bg-color);
+        border: 1px solid var(--gray-color);
+    }
+
+    .picture-nav__left {
+        position: absolute;
+        top: 45%;
+        left: 10px;
+    }
+
+    .picture-nav__right {
+        position: absolute;
+        top: 45%;
+        right: 10px;
     }
 
     .likes {
@@ -350,6 +382,16 @@
     .stay-info {
         display: flex;
         flex-direction: column;
+    }
+
+    .stay-address,
+    .price {
+        font-weight: bold;
+    }
+
+    .stay-sight,
+    .stay-schedule {
+        color: gray;
     }
 
     .check-map {
