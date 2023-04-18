@@ -130,6 +130,7 @@
     .user-airbnb {
         height: 40px;
         padding: 5px 5px;
+        margin-left: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -487,5 +488,45 @@
         padding: 10px 0;
         font-size: 10px;
         color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .header-top {
+        padding: 15px 40px;
+    }
+
+    .header-nav {
+        padding: 0 40px;
+    }
+
+    .contents {
+        padding: 0 40px;
+    }
+
+}
+
+@media screen and (max-width:950px) {
+    .header-top h1 span {
+        display: none;
+    }
+
+    .header__search-bar {
+        position: relative;
+        left: 20%;
+    }
+
+    footer {
+        height: 130px;
+    }
+
+    .footer-top {
+        padding: 20px 0;
+    }
+}
+
+@media screen and (max-width:745px) {
+    footer {
+        display: none;
     }
 }
