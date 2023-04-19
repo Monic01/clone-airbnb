@@ -13,6 +13,17 @@
     margin: 0;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--gray-color);
+    border-radius: 10px;
+}
+
+
 @media screen and (max-width:1920px) {
     body {
         max-width: 1920px;
@@ -502,6 +513,12 @@
 
     .contents {
         padding: 0 40px;
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    }
+
+    .picture-list {
+        height: 290px;
+        /* 높이조절?? */
     }
 
 }
@@ -516,6 +533,15 @@
         left: 20%;
     }
 
+    .contents {
+        padding: 0 40px;
+    }
+
+    .picture-list {
+        height: 300px;
+        /* 높이조절?? */
+    }
+
     footer {
         height: 130px;
     }
@@ -526,6 +552,11 @@
 }
 
 @media screen and (max-width:745px) {
+    .picture-list {
+        height: 300px;
+        /* 높이조절?? */
+    }
+
     footer {
         display: none;
     }
